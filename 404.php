@@ -5,6 +5,5 @@
 						<p><?php _e( 'Nothin\' to see here, folks.') ?></p>
 
 				</div><!-- .content -->
-			<?php get_sidebar() ?>
 
 <?php get_footer() ?>

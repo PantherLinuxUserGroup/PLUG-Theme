@@ -10,9 +10,8 @@ get_header(); ?>
 
 <?php while ( have_posts() ) : the_post() ?>
 
-<div id="about-blurbs" class="pre_1 col_5">
 	<?php the_content() ?>
-</div>
+
 
 <?php endwhile; ?>
 </div>

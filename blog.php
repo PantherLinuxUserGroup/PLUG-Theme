@@ -7,6 +7,7 @@
 get_header(); ?>
 
 <div id="content" class="row">
+<div class="offset1 span12 columns">
 
 <?php
 	$posts_per_page = 5;
@@ -21,14 +22,14 @@ get_header(); ?>
 
 	while ( $wp_query->have_posts() ) : $wp_query->the_post() ?>
 
-<div id="post-<?php the_ID() ?>" class="pre_1 col_10">
+<div id="post-<?php the_ID() ?>">
 	<h2>
 		<a href="<?php the_permalink() ?>" title="" rel="bookmark"><?php the_title() ?></a>
 	</h2>
-	<ul id="meta" class="row">
-		<li class="col_2">Posted on <?php the_time('F jS, Y'); ?></li>
-		<li class="col_2">Written by <?php the_author(); ?></li>
-		<li class="col_2 omega">
+	<ul id="meta" class="row unstyled">
+		<li class="span4 columns">Posted on <?php the_time('F jS, Y'); ?></li>
+		<li class="span4 columns">Written by <?php the_author(); ?></li>
+		<li class="span4 columns">
 			<?php comments_popup_link('No Comments Yet', '1 Comment', '% Comments'); ?>
 		</li>
 	</ul>
@@ -39,11 +40,11 @@ get_header(); ?>
 		<?php the_tags('Tags: ', ', ', '<br />'); ?> Posted in <?php the_category(', ') ?> | 
 		<?php edit_post_link('Edit', '', ' | '); ?>  
 		<?php comments_popup_link('No Comments »', '1 Comment »', '% Comments »'); ?>
-	<p>
+	</p>
 </div>
 
 <?php endwhile; ?>
 </div>
+</div>
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

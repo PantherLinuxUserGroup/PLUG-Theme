@@ -5,6 +5,7 @@
 
 get_header(); ?>
 
+<div class="container-fluid">
 <div class="row">
 
 <?php while ( have_posts() ) : the_post() ?>
